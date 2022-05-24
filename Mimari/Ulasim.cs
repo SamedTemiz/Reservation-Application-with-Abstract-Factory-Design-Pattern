@@ -13,6 +13,6 @@ namespace Mimari
         DateTime Tarih();
         int Tutar();
 
-        string UlasimBilgileri();
+        string[] UlasimBilgileri();
     }
 }

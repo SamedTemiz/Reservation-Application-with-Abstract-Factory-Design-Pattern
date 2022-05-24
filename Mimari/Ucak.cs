@@ -44,17 +44,10 @@ namespace Mimari
             return Fiyat * S_Tip * KisiSayi;
         }
 
-        public string UlasimBilgileri()
+        public string[] UlasimBilgileri()
         {
-            //string[] rapor=new string[7];
-            //rapor[0] = UcakFirma;
-            //rapor[1] = UcakKalkis;
-            //rapor[2] = UcakVaris;
-            //rapor[3] = U_gidis.ToString("dd/MM/yyyy");
-            //rapor[4] = U_donus.ToString("dd/MM/yyyy");
-            //rapor[5] = S_Tip.ToString();
-
-            return UcakKalkis + " - " + UcakVaris + " + " + U_gidis.ToString("dd/MM/yyyy") + " - " + KisiSayi + " - " + Tutar().ToString();
+            string[] bilgiler = {UcakFirma, UcakKalkis, U_gidis.ToString("dd/MM/yyyy"), KisiSayi.ToString(), Tutar().ToString()};
+            return bilgiler;
         }
     }
 }

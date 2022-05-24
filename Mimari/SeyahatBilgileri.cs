@@ -21,6 +21,7 @@ namespace Mimari
             date_kalkis.Value = DateTime.Now;
             date_donus.Value = DateTime.Now;
         }
+
         //Antalya
         string[,] Oteller_A = { { "Starlight Resort Hotel", "1350" }, { "Kamelya Collection Fulya", "980" }, { "Rabinson Club Pamfilya", "2150" } };
         string[,] Kamplar_A = { { "Ridocamp", "300" }, { "Mandalina Camping", "350" }, { "Mutlu Camping", "500" } };
@@ -33,11 +34,10 @@ namespace Mimari
         string[,] Oteller_I = { { "Boyalık Beach Hotel Spa", "1650" }, { "Pırıl Hotel Therman Beauty Spa", "1400" }, { "Design Plus Seya Beach Hotel", "1800" } };
         string[,] Kamplar_I = { { "Alaçatı Camping", "500" }, { "Huzur Camp", "400" }, { "Delikli Köy Kamp Alanı", "600" } };
 
-
-        //Uçak
+        //Uçaklar
         string[,] ucak = { { "Türk Hava Yolları", "1700" }, { "Pegasus", "1200" }, { "AtlasJet", "1150" } };
 
-        //Otobüs
+        //Otobüsler
         string[,] otobus = { { "Kamikoç", "450" }, { "Metro Turizm", "385" }, { "Çeşme Seyahat", "430" } };
 
         private void pic_change_Click(object sender, EventArgs e)
@@ -200,30 +200,27 @@ namespace Mimari
                     break;
             }
             seyahat = new Seyahat(paket);
-            int konaklama_tutari = int.Parse(seyahat.KonaklamaBilgileri()[1]);
-            int ulasim_tutari = int.Parse(seyahat.UlasimBilgileri()[1]);
+            int konaklama_tutari = int.Parse(seyahat.KonaklamaBilgileri()[4]);
+            int ulasim_tutari = int.Parse(seyahat.UlasimBilgileri()[4]);
             lbl_ktutar.Text = string.Format(konaklama_tutari.ToString()+"TL");
             lbl_ututar.Text = string.Format(ulasim_tutari.ToString()+"TL");
             txt_tutar.Text = string.Format((konaklama_tutari + ulasim_tutari).ToString()+"TL");
         }
         private void btn_onayla_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
-            //seyahat.KonaklamaBilgileri()
-
+            tabControl1.SelectedTab = tabPage2;  
+            data_seyahat.Rows.Add(seyahat.UlasimBilgileri()[1], seyahat.UlasimBilgileri()[2], cmb_ulasim.SelectedItem.ToString(), cmb_konaklama.SelectedItem.ToString(), seyahat.KonaklamaBilgileri()[0] ,seyahat.KonaklamaBilgileri()[1], seyahat.KonaklamaBilgileri()[3], seyahat.KonaklamaBilgileri()[2], txt_tutar.Text);
+            
         }
-
         private void radio_tek_CheckedChanged(object sender, EventArgs e)
         {
             date_donus.Enabled = false;
         }
-
         private void radio_cift_CheckedChanged(object sender, EventArgs e)
         {
             date_donus.Enabled = true;
             date_donus.MinDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
-
         private void cmb_otel_SelectedIndexChanged(object sender, EventArgs e)
         {
             int secim = cmb_otel.SelectedIndex;
@@ -241,7 +238,6 @@ namespace Mimari
                     break;
             }
         }
-
         private void cmb_varis_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmb_otel.Items.Clear();
@@ -291,6 +287,33 @@ namespace Mimari
                 cmb_ucak.Items.Add(ucak[i, 0]);
             }
         }
+        private void cmb_kamp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int secim = cmb_kamp.SelectedIndex;
+            string sehir = cmb_varis.SelectedItem.ToString();
+            switch (sehir)
+            {
+                case "Antalya":
+                    k_fiyat = int.Parse(Kamplar_A[secim, 1]);
+                    break;
+                case "Muğla":
+                    k_fiyat = int.Parse(Kamplar_M[secim, 1]);
+                    break;
+                case "İzmir":
+                    k_fiyat = int.Parse(Kamplar_I[secim, 1]);
+                    break;
+            }
+        }
+        private void cmb_otobus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int secim = cmb_otobus.SelectedIndex;
+            u_fiyat = int.Parse(otobus[secim, 1]);
+        }
+        private void cmb_ucak_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int secim = cmb_ucak.SelectedIndex;
+            u_fiyat = int.Parse(ucak[secim, 1]);
+        }
 
         private void btn_Gonder_Click(object sender, EventArgs e)
         {
@@ -315,7 +338,7 @@ namespace Mimari
         }
         private void btn_tamamla_Click(object sender, EventArgs e)
         {
-            if(data_bilgiler.RowCount > 0)
+            if (data_bilgiler.RowCount > 0)
             {
                 KimlikBilgileri kimlik = new KimlikBilgileri();
                 for (int i = 0; i < data_bilgiler.RowCount; i++)
@@ -334,9 +357,9 @@ namespace Mimari
                 btn_Gonder.Visible = false;
                 group_KimlikBilgileri.Visible = false;
 
-                data_bilgiler.Width = 780;
-                data_bilgiler.Location = new Point(50, 15);
-                list_seyahat.Visible = true;
+                data_bilgiler.Width = 856;
+                data_bilgiler.Location = new Point(10, 10);
+                data_seyahat.Visible = true;
                 cmb_cikti.Visible = true;
                 btn_cikti.Visible = true;
 
@@ -346,39 +369,13 @@ namespace Mimari
             {
                 MessageBox.Show("Herhangi bir bilgi girilmedi!");
             }
-        
+
         }
 
-        private void cmb_kamp_SelectedIndexChanged(object sender, EventArgs e)
+        private void txt_KimlikNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int secim = cmb_kamp.SelectedIndex;
-            string sehir = cmb_varis.SelectedItem.ToString();
-            switch (sehir)
-            {
-                case "Antalya":
-                    k_fiyat = int.Parse(Kamplar_A[secim, 1]);
-                    break;
-                case "Muğla":
-                    k_fiyat = int.Parse(Kamplar_M[secim, 1]);
-                    break;
-                case "İzmir":
-                    k_fiyat = int.Parse(Kamplar_I[secim, 1]);
-                    break;
-            }
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
-        private void cmb_otobus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int secim = cmb_otobus.SelectedIndex;
-            u_fiyat = int.Parse(otobus[secim, 1]);
-        }
-
-        private void cmb_ucak_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int secim = cmb_ucak.SelectedIndex;
-            u_fiyat = int.Parse(ucak[secim, 1]);
-        }
-
 
         private void btn_cikti_Click(object sender, EventArgs e)
         {

@@ -38,9 +38,11 @@ namespace Mimari
         {
             return Fiyat * KisiSayi * Gun;
         }
-        public string KonaklamaBilgileri()
+        public string[] KonaklamaBilgileri()
         {
-            return Konum + " - " + Ad + " - " + KisiSayi + " - " + Gun + " - " + Tutar().ToString();
+            //Konum + " - " + Ad + " - " + KisiSayi + " - " + Gun + " - " + Tutar().ToString()
+            string[] bilgiler = { Konum, Ad, Gun.ToString(), KisiSayi.ToString(), Tutar().ToString() };
+            return bilgiler;
         }
     }
 }

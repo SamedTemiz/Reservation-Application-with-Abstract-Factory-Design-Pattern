@@ -16,19 +16,13 @@ namespace Mimari
             konaklama = paket.KonaklamaOlustur();
             ulasim = paket.UlasimOlustur();
         }
-        public List<string> KonaklamaBilgileri()
+        public string[] KonaklamaBilgileri()
         {
-            List<string> bilgiler = new List<string>();
-            bilgiler.Add(konaklama.KonaklamaBilgileri());
-            bilgiler.Add(konaklama.Tutar().ToString());
-            return bilgiler;
+            return konaklama.KonaklamaBilgileri();
         }
-        public List<string> UlasimBilgileri()
+        public string[] UlasimBilgileri()
         {
-            List<string> bilgiler = new List<string>();
-            bilgiler.Add(ulasim.UlasimBilgileri());
-            bilgiler.Add(ulasim.Tutar().ToString());
-            return bilgiler;
+            return ulasim.UlasimBilgileri();
         }
     }
 }

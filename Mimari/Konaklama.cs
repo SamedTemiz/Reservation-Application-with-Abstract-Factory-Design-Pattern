@@ -13,6 +13,6 @@ namespace Mimari
         int Sure();
         int Tutar();
 
-        string KonaklamaBilgileri();
+        string[] KonaklamaBilgileri();
     }
 }

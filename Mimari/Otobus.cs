@@ -44,9 +44,10 @@ namespace Mimari
             return Fiyat * S_Tip * KisiSayi;
         }
 
-        public string UlasimBilgileri()
+        public string[] UlasimBilgileri()
         {
-            return OtobusKalkis + " - " + OtobusVaris + " + " + O_gidis.ToString("dd/MM/yyyy") + " - " + KisiSayi + " - " + Tutar().ToString();
+            string[] bilgiler = { OtobusFirma, OtobusKalkis, O_gidis.ToString("dd/MM/yyyy"), KisiSayi.ToString(), Tutar().ToString() };
+            return bilgiler;
         }
     }
 }
