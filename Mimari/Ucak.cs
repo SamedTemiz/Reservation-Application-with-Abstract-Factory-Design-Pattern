@@ -13,9 +13,10 @@ namespace Mimari
         string UcakVaris;
         DateTime U_gidis;
         DateTime U_donus;
-        int Fiyat = 1333;
         int S_Tip;
-        public Ucak(string firma, string kalkis, string varis, DateTime gidis, DateTime donus, int tip)
+        int KisiSayi;
+        int Fiyat;
+        public Ucak(string firma, string kalkis, string varis, DateTime gidis, DateTime donus, int tip, int kisiSayi, int u_fiyat)
         {
             UcakFirma = firma;
             UcakKalkis = kalkis;
@@ -23,6 +24,8 @@ namespace Mimari
             U_gidis = gidis;
             U_donus = donus;
             S_Tip = tip;
+            KisiSayi = kisiSayi;
+            Fiyat = u_fiyat;
         }
         public string KalkisYeri()
         {
@@ -38,12 +41,20 @@ namespace Mimari
         }
         public int Tutar()
         {
-            return 1000 * S_Tip;
+            return Fiyat * S_Tip * KisiSayi;
         }
 
         public string UlasimBilgileri()
         {
-            return UcakFirma + " - " + UcakKalkis + " - " + UcakVaris + " - " + U_gidis.ToString("dd/MM/yyyy") + " - " + U_donus.ToString("dd/MM/yyyy") + " - " + Fiyat;
+            //string[] rapor=new string[7];
+            //rapor[0] = UcakFirma;
+            //rapor[1] = UcakKalkis;
+            //rapor[2] = UcakVaris;
+            //rapor[3] = U_gidis.ToString("dd/MM/yyyy");
+            //rapor[4] = U_donus.ToString("dd/MM/yyyy");
+            //rapor[5] = S_Tip.ToString();
+
+            return UcakKalkis + " - " + UcakVaris + " + " + U_gidis.ToString("dd/MM/yyyy") + " - " + KisiSayi + " - " + Tutar().ToString();
         }
     }
 }

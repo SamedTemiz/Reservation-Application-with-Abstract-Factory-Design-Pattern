@@ -19,13 +19,15 @@ namespace Mimari
         public List<string> KonaklamaBilgileri()
         {
             List<string> bilgiler = new List<string>();
-            bilgiler.Add(konaklama.KonaklamaBilgileri());     
+            bilgiler.Add(konaklama.KonaklamaBilgileri());
+            bilgiler.Add(konaklama.Tutar().ToString());
             return bilgiler;
         }
         public List<string> UlasimBilgileri()
         {
             List<string> bilgiler = new List<string>();
             bilgiler.Add(ulasim.UlasimBilgileri());
+            bilgiler.Add(ulasim.Tutar().ToString());
             return bilgiler;
         }
     }

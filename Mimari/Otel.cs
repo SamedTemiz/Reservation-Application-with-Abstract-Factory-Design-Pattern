@@ -13,14 +13,15 @@ namespace Mimari
         public string Konum;
         public int Gun;
         public int KisiSayi;
-        public int Fiyat = 1250;
+        public int Fiyat;
 
-        public Otel(string otelSehir, string otelAd, int otelSure, int otelKisiSayi)
+        public Otel(string otelSehir, string otelAd, int otelSure, int otelKisiSayi, int k_fiyat)
         {
             Konum = otelSehir;
             Ad = otelAd;
             Gun = otelSure;
             KisiSayi = otelKisiSayi;
+            Fiyat = k_fiyat;
         }
         public string Sehir()
         {
@@ -36,12 +37,12 @@ namespace Mimari
         }
         public int Tutar()
         {
-            return 1500;
+            return Fiyat * KisiSayi * Gun;
         }
 
         public string KonaklamaBilgileri()
         {
-            return Konum + " - " + Ad + " - " + Gun + " - " + Fiyat * Gun * KisiSayi;
+            return Konum + " - " + Ad + " - " + KisiSayi + " - " + Gun + " - " + Tutar().ToString();
         }
     }
 }

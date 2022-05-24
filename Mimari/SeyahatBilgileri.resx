@@ -117,18 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pic_tutar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAAdgAAAHYAfpcpnIAAAEKSURBVGhD7ZVBCsQgFMXm/pfu
-        IIzFfoNjbX9WBiLlbSJu+jmOY/tAHLfz4ridtxxZdLE/ZkK9VyxHJl1wYDbUfGw5LLp40ILay9YPk8sF
-        QAtq3zYOJrEdNaH+lDj+tKB21ILaQ3EMmlC/1YLaKI4DLajdakL9UxwnNKF+1YT6yw9YNaF+q8nZbS/w
-        VAtqt5q8+oCtBtSNpkPRNzSgbjQdiq5qQe1Wk/0TWeTsthe4own1qybUv/2AFtRuNaH+KY5BE+q3WlAb
-        xfGnBbWjFtQeGgeT2I6aUH/K+mFyuQBoQe3blsOiiwctqL1sOTLpggOzoeZjy5FFF/tjJtR7RRy38+K4
-        nRfH7azH5wsIK9jp0A/GXwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pic_ulasim.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -141,6 +148,17 @@
 </value>
   </data>
   <data name="pic_konaklama.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAAdgAAAHYAfpcpnIAAAEKSURBVGhD7ZVBCsQgFMXm/pfu
+        IIzFfoNjbX9WBiLlbSJu+jmOY/tAHLfz4ridtxxZdLE/ZkK9VyxHJl1wYDbUfGw5LLp40ILay9YPk8sF
+        QAtq3zYOJrEdNaH+lDj+tKB21ILaQ3EMmlC/1YLaKI4DLajdakL9UxwnNKF+1YT6yw9YNaF+q8nZbS/w
+        VAtqt5q8+oCtBtSNpkPRNzSgbjQdiq5qQe1Wk/0TWeTsthe4own1qybUv/2AFtRuNaH+KY5BE+q3WlAb
+        xfGnBbWjFtQeGgeT2I6aUH/K+mFyuQBoQe3blsOiiwctqL1sOTLpggOzoeZjy5FFF/tjJtR7RRy38+K4
+        nRfH7azH5wsIK9jp0A/GXwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pic_tutar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAAAdgAAAHYAfpcpnIAAAEKSURBVGhD7ZVBCsQgFMXm/pfu
