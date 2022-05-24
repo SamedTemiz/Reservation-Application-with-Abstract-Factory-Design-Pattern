@@ -12,13 +12,14 @@ namespace Mimari
         public string Konum;
         public int Gun;
         public int KisiSayi;
-        public int Fiyat = 250;
-        public Kamp(string kampSehir, string kampAd, int kampSure, int kampKisiSayi)
+        public int Fiyat;
+        public Kamp(string kampSehir, string kampAd, int kampSure, int kampKisiSayi, int k_fiyat)
         {
             Konum = kampSehir;
             Ad = kampAd;
             Gun = kampSure;
             KisiSayi = kampKisiSayi;
+            Fiyat = k_fiyat;
         }
 
         public string Sehir()
@@ -35,11 +36,11 @@ namespace Mimari
         }
         public int Tutar()
         {
-            return 1000;
+            return Fiyat * KisiSayi * Gun;
         }
         public string KonaklamaBilgileri()
         {
-            return Konum + " - " + Ad + " - " + Gun + " - " + Fiyat * Gun;
+            return Konum + " - " + Ad + " - " + KisiSayi + " - " + Gun + " - " + Tutar().ToString();
         }
     }
 }

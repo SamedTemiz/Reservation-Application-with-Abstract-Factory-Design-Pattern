@@ -13,9 +13,10 @@ namespace Mimari
         string OtobusVaris;
         DateTime O_gidis;
         DateTime O_donus;
-        int Fiyat = 520;
         int S_Tip;
-        public Otobus(string firma, string kalkis, string varis, DateTime gidis, DateTime donus, int tip)
+        int KisiSayi;
+        int Fiyat = 0;
+        public Otobus(string firma, string kalkis, string varis, DateTime gidis, DateTime donus, int tip,int kisiSayi, int u_fiyat)
         {
             OtobusFirma = firma;
             OtobusKalkis = kalkis;
@@ -23,6 +24,8 @@ namespace Mimari
             O_gidis = gidis;
             O_donus = donus;
             S_Tip = tip;
+            KisiSayi = kisiSayi;
+            Fiyat = u_fiyat;
         }
         public string KalkisYeri()
         {
@@ -38,12 +41,12 @@ namespace Mimari
         }
         public int Tutar()
         {
-            return 1500;
+            return Fiyat * S_Tip * KisiSayi;
         }
 
         public string UlasimBilgileri()
         {
-            return OtobusFirma + " - " + OtobusKalkis + " - " + OtobusVaris + " - " + O_gidis.ToString("dd/MM/yyyy") + " - " + O_donus.ToString("dd/MM/yyyy") + " - " + Fiyat;
+            return OtobusKalkis + " - " + OtobusVaris + " + " + O_gidis.ToString("dd/MM/yyyy") + " - " + KisiSayi + " - " + Tutar().ToString();
         }
     }
 }
