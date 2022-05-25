@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Mimari
 {
@@ -45,7 +44,7 @@ namespace Mimari
         }
         public void Tutar(Seyahat s)
         {
-            _product.Add(s.KonaklamaBilgileri()[4] + s.UlasimBilgileri()[4]);
+            _product.Add((int.Parse(s.KonaklamaBilgileri()[4]) + int.Parse(s.UlasimBilgileri()[4])).ToString());
         }
         public void GetProduct()
         {
