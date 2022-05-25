@@ -336,11 +336,13 @@ namespace Mimari
             cmb_Cinsiyet.Text = "";
             group_KimlikBilgileri.Text = k + 1 + ".Kişinin Bilgileri";
         }
+
+        KimlikBilgileri kimlik = new KimlikBilgileri();
         private void btn_tamamla_Click(object sender, EventArgs e)
         {
             if (data_bilgiler.RowCount > 0)
             {
-                KimlikBilgileri kimlik = new KimlikBilgileri();
+                
                 for (int i = 0; i < data_bilgiler.RowCount; i++)
                 {
                     kimlik.Tc = data_bilgiler.Rows[i].Cells[0].Value.ToString();
@@ -386,6 +388,12 @@ namespace Mimari
                     break;
                 case "XML":
                     //Xml olacak
+                    Xml xml = new Xml();
+                    xml.SeyahatBilgi(seyahat, kimlik);
+                    xml.SeyahatDetayliBilgi(seyahat);
+                    xml.Tutar(seyahat);
+                    xml.GetProduct();
+                    MessageBox.Show("Başarılı");
                     break;
                 case "HTML":
                     //Html olacak

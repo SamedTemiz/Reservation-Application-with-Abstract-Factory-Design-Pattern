@@ -9,9 +9,9 @@ namespace Mimari
     public interface IRaporla
     {
         //IBuilder
-         string SeyahatBilgi();
-         string SeyahatDetayliBilgi();
-         void Tutar();
+         void SeyahatBilgi(Seyahat s, KimlikBilgileri kimlik);
+         void SeyahatDetayliBilgi(Seyahat s);
+         void Tutar(Seyahat s);
         
     }
 }

@@ -12,7 +12,6 @@ namespace Mimari
         string MekanAdi();
         int Sure();
         int Tutar();
-
         string[] KonaklamaBilgileri();
     }
 }

@@ -71,6 +71,15 @@ namespace Mimari
             this.cmb_varis = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.data_seyahat = new System.Windows.Forms.DataGridView();
+            this.kalkis_yeri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kalkis_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulasim_araci = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.konaklama_turu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mekan_konum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mekan_adi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kisi_sayi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmb_cikti = new System.Windows.Forms.ComboBox();
             this.btn_cikti = new System.Windows.Forms.Button();
             this.btn_tamamla = new System.Windows.Forms.Button();
@@ -95,15 +104,6 @@ namespace Mimari
             this.lbl_Soyad = new System.Windows.Forms.Label();
             this.txt_Soyad = new System.Windows.Forms.TextBox();
             this.btn_Gonder = new System.Windows.Forms.Button();
-            this.kalkis_yeri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kalkis_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ulasim_araci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.konaklama_turu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mekan_konum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mekan_adi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kisi_sayi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabpage1.SuspendLayout();
             this.pnl_tumsayfa.SuspendLayout();
@@ -694,6 +694,60 @@ namespace Mimari
             this.data_seyahat.TabIndex = 11;
             this.data_seyahat.Visible = false;
             // 
+            // kalkis_yeri
+            // 
+            this.kalkis_yeri.HeaderText = "KALKIŞ YERİ";
+            this.kalkis_yeri.Name = "kalkis_yeri";
+            this.kalkis_yeri.ReadOnly = true;
+            // 
+            // kalkis_tarihi
+            // 
+            this.kalkis_tarihi.HeaderText = "TARİH";
+            this.kalkis_tarihi.Name = "kalkis_tarihi";
+            this.kalkis_tarihi.ReadOnly = true;
+            // 
+            // ulasim_araci
+            // 
+            this.ulasim_araci.HeaderText = "ULAŞIM ARACI";
+            this.ulasim_araci.Name = "ulasim_araci";
+            this.ulasim_araci.ReadOnly = true;
+            // 
+            // konaklama_turu
+            // 
+            this.konaklama_turu.HeaderText = "KONAKLAMA";
+            this.konaklama_turu.Name = "konaklama_turu";
+            this.konaklama_turu.ReadOnly = true;
+            // 
+            // mekan_konum
+            // 
+            this.mekan_konum.HeaderText = "KONUM";
+            this.mekan_konum.Name = "mekan_konum";
+            this.mekan_konum.ReadOnly = true;
+            // 
+            // mekan_adi
+            // 
+            this.mekan_adi.HeaderText = "MEKAN ADI";
+            this.mekan_adi.Name = "mekan_adi";
+            this.mekan_adi.ReadOnly = true;
+            // 
+            // kisi_sayi
+            // 
+            this.kisi_sayi.HeaderText = "KİŞİ SAYISI";
+            this.kisi_sayi.Name = "kisi_sayi";
+            this.kisi_sayi.ReadOnly = true;
+            // 
+            // gun
+            // 
+            this.gun.HeaderText = "GÜN";
+            this.gun.Name = "gun";
+            this.gun.ReadOnly = true;
+            // 
+            // tutar
+            // 
+            this.tutar.HeaderText = "TOPLAM TUTAR";
+            this.tutar.Name = "tutar";
+            this.tutar.ReadOnly = true;
+            // 
             // cmb_cikti
             // 
             this.cmb_cikti.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -959,60 +1013,6 @@ namespace Mimari
             this.btn_Gonder.Text = "Gönder";
             this.btn_Gonder.UseVisualStyleBackColor = false;
             this.btn_Gonder.Click += new System.EventHandler(this.btn_Gonder_Click);
-            // 
-            // kalkis_yeri
-            // 
-            this.kalkis_yeri.HeaderText = "KALKIŞ YERİ";
-            this.kalkis_yeri.Name = "kalkis_yeri";
-            this.kalkis_yeri.ReadOnly = true;
-            // 
-            // kalkis_tarihi
-            // 
-            this.kalkis_tarihi.HeaderText = "TARİH";
-            this.kalkis_tarihi.Name = "kalkis_tarihi";
-            this.kalkis_tarihi.ReadOnly = true;
-            // 
-            // ulasim_araci
-            // 
-            this.ulasim_araci.HeaderText = "ULAŞIM ARACI";
-            this.ulasim_araci.Name = "ulasim_araci";
-            this.ulasim_araci.ReadOnly = true;
-            // 
-            // konaklama_turu
-            // 
-            this.konaklama_turu.HeaderText = "KONAKLAMA";
-            this.konaklama_turu.Name = "konaklama_turu";
-            this.konaklama_turu.ReadOnly = true;
-            // 
-            // mekan_konum
-            // 
-            this.mekan_konum.HeaderText = "KONUM";
-            this.mekan_konum.Name = "mekan_konum";
-            this.mekan_konum.ReadOnly = true;
-            // 
-            // mekan_adi
-            // 
-            this.mekan_adi.HeaderText = "MEKAN ADI";
-            this.mekan_adi.Name = "mekan_adi";
-            this.mekan_adi.ReadOnly = true;
-            // 
-            // kisi_sayi
-            // 
-            this.kisi_sayi.HeaderText = "KİŞİ SAYISI";
-            this.kisi_sayi.Name = "kisi_sayi";
-            this.kisi_sayi.ReadOnly = true;
-            // 
-            // gun
-            // 
-            this.gun.HeaderText = "GÜN";
-            this.gun.Name = "gun";
-            this.gun.ReadOnly = true;
-            // 
-            // tutar
-            // 
-            this.tutar.HeaderText = "TOPLAM TUTAR";
-            this.tutar.Name = "tutar";
-            this.tutar.ReadOnly = true;
             // 
             // SeyahatBilgileri
             // 

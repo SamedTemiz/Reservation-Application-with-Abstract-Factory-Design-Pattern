@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    public class Seyahat
+    public class Seyahat //Raporlama için Director sınıfı
     {
         IKonaklama konaklama;
         IUlasim ulasim;
-    
+
+        IRaporla raporla;
+
         public Seyahat(ISoyutFabrika paket)
         {
             konaklama = paket.KonaklamaOlustur();
@@ -23,6 +25,12 @@ namespace Mimari
         public string[] UlasimBilgileri()
         {
             return ulasim.UlasimBilgileri();
+        }
+        public void Builder(Seyahat s, KimlikBilgileri kimlik)
+        {
+            raporla.SeyahatBilgi(s, kimlik);
+            raporla.SeyahatDetayliBilgi(s);
+            raporla.Tutar(s);
         }
     }
 }
