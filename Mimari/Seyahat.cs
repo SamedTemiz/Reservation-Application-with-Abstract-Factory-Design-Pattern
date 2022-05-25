@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    
-    class Seyahat
+    public class Seyahat
     {
         IKonaklama konaklama;
         IUlasim ulasim;
+    
         public Seyahat(ISoyutFabrika paket)
         {
             konaklama = paket.KonaklamaOlustur();

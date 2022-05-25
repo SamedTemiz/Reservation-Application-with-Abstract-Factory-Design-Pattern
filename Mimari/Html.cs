@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    public interface ISoyutFabrika
+    class Html
     {
-        IKonaklama KonaklamaOlustur();
-        IUlasim UlasimOlustur();
+        
     }
 }

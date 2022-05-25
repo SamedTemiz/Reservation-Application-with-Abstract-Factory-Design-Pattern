@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    public interface ISoyutFabrika
+    class Json
     {
-        IKonaklama KonaklamaOlustur();
-        IUlasim UlasimOlustur();
     }
 }

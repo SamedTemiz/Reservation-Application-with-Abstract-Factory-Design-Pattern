@@ -67,7 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cikti.cs" />
+    <Compile Include="Director.cs" />
+    <Compile Include="Html.cs" />
+    <Compile Include="Json.cs" />
     <Compile Include="KimlikBilgileri.cs" />
+    <Compile Include="Raporla.cs" />
     <Compile Include="SeyahatBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +93,8 @@
     <Compile Include="SoyutFabrika.cs" />
     <Compile Include="Ucak.cs" />
     <Compile Include="Ulasim.cs" />
+    <Compile Include="Xml.cs" />
+    <Compile Include="XmlRapor.cs" />
     <EmbeddedResource Include="SeyahatBilgileri.resx">
       <DependentUpon>SeyahatBilgileri.cs</DependentUpon>
     </EmbeddedResource>

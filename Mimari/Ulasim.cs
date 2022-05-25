@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    interface IUlasim
+    public interface IUlasim
     {
         string KalkisYeri();
         string VarisYeri();

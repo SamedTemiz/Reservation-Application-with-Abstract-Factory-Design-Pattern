@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    public interface ISoyutFabrika
+    public interface IRaporla
     {
-        IKonaklama KonaklamaOlustur();
-        IUlasim UlasimOlustur();
+        //IBuilder
+         string SeyahatBilgi();
+         string SeyahatDetayliBilgi();
+         void Tutar();
+        
     }
 }
