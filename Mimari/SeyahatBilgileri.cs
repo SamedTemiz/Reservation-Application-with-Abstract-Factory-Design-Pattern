@@ -384,7 +384,12 @@ namespace Mimari
             switch (cmb_cikti.SelectedItem)
             {
                 case "JSON":
-                    //Json olacak
+                    Json json = new Json();
+                    json.SeyahatBilgi(seyahat, kimlik);
+                    json.SeyahatDetayliBilgi(seyahat);
+                    json.Tutar(seyahat);
+                    json.GetProduct();
+                    MessageBox.Show("Başarılı");
                     break;
                 case "XML":
                     //Xml olacak
