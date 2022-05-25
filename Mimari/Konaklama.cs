@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Mimari
 {
-    interface IKonaklama
+    public interface IKonaklama
     {
         string Sehir();
         string MekanAdi();
         int Sure();
         int Tutar();
-
         string[] KonaklamaBilgileri();
     }
 }
